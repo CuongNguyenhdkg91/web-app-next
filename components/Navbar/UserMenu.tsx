@@ -2,8 +2,8 @@
 
 import { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import MenuItem from "./MenuItem";
-import useRentModal from "@/app/StateManage/useRenModal";
+import MenuItem from "../Elements/MenuItem";
+import useRentModal from "@/zustand/useRenModal";
 
 
 const  UserMenu = () => {

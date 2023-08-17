@@ -1,12 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import useRentModal from "@/app/StateManage/useRenModal"
+import useRentModal from "@/zustand/useRenModal"
 import FormTemplate from "./FormTemplate"
 
 import { toast } from 'react-hot-toast' 
-import Heading from "./Heading"
-import Input from './Input'
+import Heading from "../Elements/Heading"
+import Input from '../Elements/Input'
 import { TbPhotoPlus } from 'react-icons/tb'
 
 import { useRouter } from 'next/navigation'

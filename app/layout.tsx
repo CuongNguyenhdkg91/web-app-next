@@ -1,7 +1,7 @@
 
-import CreateNew from './components/FormCreate/CreateNew'
-import Navbar from './components/Navbar/Navbar'
-import './globals.css'
+import CreateNew from '../components/FormCreate/CreateNew'
+import Navbar from '../components/Navbar/Navbar'
+import '../globals.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })

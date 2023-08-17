@@ -1,5 +1,5 @@
 import Container from "./Container"
-import Logo from "./Logo"
+import Logo from "../Elements/Logo"
 import UserMenu from "./UserMenu"
 
 const Navbar = () => {
