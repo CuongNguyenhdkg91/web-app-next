@@ -29,3 +29,9 @@ model User {
   posts         Post[]
   @@map(name: "users")
 }
+
+model ThieuNhi {
+  id       String    @id @map("_id") @default(auto()) @db.ObjectId
+  FullName  String
+  createdAt     DateTime  @default(now())
+}

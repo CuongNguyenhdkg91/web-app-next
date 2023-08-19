@@ -2,11 +2,11 @@
 
 import Image from 'next/image'
 import useRentModal from "@/zustand/useRenModal"
-import FormTemplate from "./FormTemplate"
+import FormTemplate from "../../components/FormCreate/FormTemplate"
 
 import { toast } from 'react-hot-toast' 
-import Heading from "../Elements/Heading"
-import Input from '../Elements/Input'
+import Heading from "../../components/Elements/Heading"
+import Input from '../../components/Elements/Input'
 import { TbPhotoPlus } from 'react-icons/tb'
 
 import { useRouter } from 'next/navigation'

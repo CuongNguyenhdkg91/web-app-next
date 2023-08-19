@@ -1,10 +1,10 @@
 import Container from "./Container"
-import Logo from "../Elements/Logo"
+import Logo from "./Logo"
 import UserMenu from "./UserMenu"
 
 const Navbar = () => {
     return(
-        <div className="fixed w-full bg-white z-10 shadow-sm">
+        <div className="fixed w-full bg-yellow z-10 shadow-sm">
           <Container>
             <div 
               className="
@@ -20,7 +20,6 @@ const Navbar = () => {
             <UserMenu/>
             </div>
           </Container>
-
         </div>
     )
 }

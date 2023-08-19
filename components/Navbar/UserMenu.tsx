@@ -2,11 +2,14 @@
 
 import { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import MenuItem from "../Elements/MenuItem";
+import MenuItem from "./MenuItem";
 import useRentModal from "@/zustand/useRenModal";
+import { useRouter } from "next/navigation";
 
 
 const  UserMenu = () => {
+
+    const router = useRouter()
 
     const [isOpen, setIsOpen] = useState(false)
     
@@ -81,7 +84,7 @@ const  UserMenu = () => {
                             label = "Edit" />
 
                             <MenuItem
-                            onClick={()=>{}}
+                            onClick={()=>{router.push('/CreateNew')}}
                             label = "Create" />
                         </>
                     </div>
