@@ -1,23 +1,24 @@
 'use client'
 
-import Image from 'next/image'
-import useRentModal from "@/zustand/useRenModal"
-import FormTemplate from "../../components/FormCreate/FormTemplate"
-
-import { toast } from 'react-hot-toast' 
-import Heading from "../../components/Elements/Heading"
-import Input from '../../components/Elements/Input'
-import { TbPhotoPlus } from 'react-icons/tb'
-
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
+
+import Input from '../../components/Elements/Input'
+import FormTemplate from "../../components/FormCreate/FormTemplate"
+import Image from 'next/image'
+
+import { toast } from 'react-hot-toast' 
+import { TbPhotoPlus } from 'react-icons/tb'
+
+import useFormShow from "@/zustand/FormShow"
 import { useState } from 'react'
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 
 const CreateNew  = () => {
     const router = useRouter()
-    const CreateNew = useRentModal()
+    const FormShow = useFormShow()
     const [isLoading, setIsLoading] = useState(false)
+
     const { 
         register, 
         handleSubmit,
@@ -34,56 +35,53 @@ const CreateNew  = () => {
         }
       })
 
-      const imageSrc = watch('imageSrc')
+    const imageSrc = watch('imageSrc')
 
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
-        setValue("imageSrc",data.content)
+        setValue("imageSrc", data.content)
         console.log(data)
 
-        axios.post('api/CreateItem',data)
-        .then(() => {
-            toast.success('New Item Created')
-            router.refresh()
-            reset();
-            CreateNew.onClose()
-        })
+        axios.post('api/CreateItem', data)
+            .then(() => {
+                toast.success('New Item Created')
+                router.refresh()
+                reset();
+                FormShow.onClose()
+            })
 
-        .catch(()=> {
-            toast.error('Check your code')
-        })
+            .catch(()=> {
+                toast.error('Check your code')
+            })
 
-        .finally(() =>{
-            setIsLoading(false)
-        })
-
+            .finally(() =>{
+                setIsLoading(false)
+            })
     }
 
     const bodyContent = (
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
+            <Input id="content" label="Paste the https link"
+                disabled = {isLoading}
+                register={register}
+                errors={errors}
+                required
 
-{/*             <Heading
-                title="Add the image of the item"
-                subtitle="Put the address of the available image"
-            /> */}
-            
-             <Input
-                id="content"
-                label="Paste the https link"
+            />
+           <Input id="title" label="write the title"
                 disabled = {isLoading}
                 register={register}
                 errors={errors}
                 required
             />
 
-            <Input
-                id="title"
-                label="write the title"
-                disabled = {isLoading}
-                register={register}
-                errors={errors}
-                required
-            />
+            <div className="flex flex-col items-center">
+                <Image src={imageSrc}
+                        width={300} height={300} alt="Picture of the author"/>
+            </div>
+        </div>
+    )
 
+            {/* insert into for adding the image from computer */}
             {/* <div
                 onClick={() => open?.()}
                 className="
@@ -111,30 +109,14 @@ const CreateNew  = () => {
                 </div>
             </div> */}
 
-            <div className="
-                flex
-                flex-col
-                items-center"
-                >
-                <Image
-                    src={imageSrc}
-                    width={300}
-                    height={300}
-                    alt="Picture of the author"
-                    />
-            </div>
-
-        </div>
-        )
-
     return(
         <FormTemplate 
         title = 'Create New Item'
         actionLabel='Create'
         body={bodyContent}
-        isOpen = {CreateNew.isOpen}
+        isOpen = {FormShow.isOpen}
         onSubmit={handleSubmit(onSubmit)}
-        onClose={CreateNew.onClose}
+        onClose={FormShow.onClose}
         />
     )
 }
