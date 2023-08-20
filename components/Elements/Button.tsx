@@ -25,9 +25,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       className={`relative w-20 rounded-lg
               disabled:opacity-70 disabled:cursor-not-allowed hover:opacity-80 transition
-              ${outline ? 'bg-white' : 'bg-rose-500'}
-              ${outline ? 'border-black' : 'border-rose-500'}
-              ${outline ? 'text-black' : 'text-white'}
+              ${outline ? 'bg-white border-black text-black' : 'bg-rose-500 border-rose-500 text-white'}
               ${small ? 'text-sm py-1 font-light border-[1px]' : 'text-md py-3 font-semibold border-2'}
               `}
     >

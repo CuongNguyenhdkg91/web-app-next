@@ -84,7 +84,7 @@ const FormTemplate: React.FC<ModalProps> = ({
                 `}
           >
             <div className="relative flex flex-col translate
-              w-full h-full lg:h-auto md:h-auto
+              w-full h-full lg:h-auto md:h-screen
               border-0 rounded-lg shadow-lg bg-white outline-none focus:outline-none
             ">
               
@@ -101,13 +101,13 @@ const FormTemplate: React.FC<ModalProps> = ({
               </div>
 
               {/*body*/}
-              <div className="relative p-3 flex-auto">
+              <div className="relative p-3 flex-none">
                 {body}
               </div>
 
               {/*Form Buttons*/}
-              <div className="flex flex-col gap-2 p-1">
-                <div className="flex flex-row items-center gap-4 w-full">
+              <div className="grow flex flex-col-reverse gap-2 p-1">
+                <div className="flex flex-row-reverse items-center gap-4 w-full">
                   <Button 
                     disabled={disabled} 
                     label={actionLabel} 

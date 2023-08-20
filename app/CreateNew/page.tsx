@@ -65,8 +65,8 @@ const CreateNew  = () => {
                 register={register}
                 errors={errors}
                 required
-
             />
+            
            <Input id="title" label="write the title"
                 disabled = {isLoading}
                 register={register}
