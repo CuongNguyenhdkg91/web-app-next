@@ -1,9 +1,8 @@
 import prisma from "../../../prisma/prismadb";
 import { NextResponse } from "next/server";
 
-import { NextApiRequest, NextApiResponse } from "next";
 
-export async function GET() {
+export async function GET(req: Request,) {
       const records = await prisma.post.findMany({
 
       })
