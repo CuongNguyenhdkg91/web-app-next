@@ -46,15 +46,13 @@ const CreateNew  = () => {
                 toast.success('New Item Created')
                 router.refresh()
                 reset();
-                FormShow.onClose()
+                //FormShow.onClose() // keep the form open
             })
-
             .catch(()=> {
                 toast.error('Check your code')
             })
-
             .finally(() =>{
-                setIsLoading(false)
+                setIsLoading(false) 
             })
     }
 
