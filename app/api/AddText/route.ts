@@ -3,7 +3,7 @@ import prisma from "../../../prisma/prismadb";
 
 export async function PUT(request:Request,) {
     const body = await request.json()
-    const {id,title,grade} = body
+    const {id,title,grade,note} = body
     
     Object.keys(body).forEach((value: any) => {
         if (!body[value]) {NextResponse.error()}
@@ -14,6 +14,7 @@ export async function PUT(request:Request,) {
         data: {
           title,
           grade,
+          note,
         }
       })
 
