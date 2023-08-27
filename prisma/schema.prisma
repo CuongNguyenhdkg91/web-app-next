@@ -14,12 +14,12 @@ datasource db {
 model Post {
   id       String    @id @default(auto()) @map("_id") @db.ObjectId
   title     String
-  content   String?
+  content   String ?
   grade     String?
   published Boolean @default(false)
   author    User?   @relation(fields: [authorId], references: [id])
   authorId  String? @db.ObjectId
-  note      String?
+  note      String[] 
 }
 
 model User {
