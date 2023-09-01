@@ -35,10 +35,10 @@ const CreateNew  = () => {
         }
       })
 
-    const imageSrc = watch('imageSrc')
+    const imageSrc = watch('content')
 
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
-        setValue("imageSrc", data.content)
+        //setValue("imageSrc", data.content)
         console.log(data)
 
         axios.post('api/CreateItem', data)

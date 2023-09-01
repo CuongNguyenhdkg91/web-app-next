@@ -1,0 +1,256 @@
+.component1 {
+    top: 283px;
+  }
+  .maiHan {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 6.7251%;
+    right: 71.345%;
+    top: 0;
+    bottom: 60.2941%;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .lop1 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 6.7251%;
+    right: 76.3158%;
+    top: 39.7059%;
+    bottom: 20.5882%;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  ._1 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    right: 96.7836%;
+    top: 20.5882%;
+    bottom: 39.7059%;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .xuatSac {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 71.7836%;
+    right: 17.9825%;
+    top: 20.5882%;
+    bottom: 39.7059%;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .component12.component12 {
+    left: 12px;
+    top: 598px;
+  }
+  .maiHan2 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 6.7251%;
+    right: 32.7485%;
+    top: 0;
+    bottom: 60.2941%;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .lop12 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 6.7251%;
+    right: 78.655%;
+    top: 39.7059%;
+    bottom: 20.5882%;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  ._12 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    right: 96.7836%;
+    top: 20.5882%;
+    bottom: 39.7059%;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .xuatSac2 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 71.7836%;
+    right: 4.8246%;
+    top: 20.5882%;
+    bottom: 39.7059%;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .component13.component13 {
+    left: 12px;
+    top: 657px;
+  }
+  .component14.component14 {
+    left: 10px;
+    top: 716px;
+  }
+  .root {
+    /* width: 1112px; */
+    /* width: 100vmax; */
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    place-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 5px;
+    background-color: #155250;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .divList {
+    position: relative;
+    width: 387px;
+    /* height: 774px; */
+    /* place-content: center; */
+    align-items: center;
+    gap: 5px;
+    /* padding: 10px; */
+    background-color: #ffffff29;
+    overflow: hidden;
+  }
+  .pHATTHUONG {
+    color: #fff;
+    font-size: 40px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    /* position: absolute; */
+    left: 52px;
+    top: 157px;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .gIAOXUUcMeVoNhiemHonAt {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    /* position: absolute; */
+    left: 34px;
+    top: 130px;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }
+  .chuaThanhLinh1 {
+    /* position: absolute; */
+    left: 150px;
+    top: 6px;
+    width: 88px;
+    height: 114px;
+    background-image:/* webpackIgnore: true */ url('/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .image3 {
+    /* position: absolute;
+    top: 347px;
+    left: 28px; */
+    width: 324px;
+    height: 243px;
+    background-image:/* webpackIgnore: true */ url('https://storybrain.azureedge.net/figma-to-html/figma-to-html/5da741e34ccca8afad968ff6ea4cb0117401c222');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .line1 {
+    transform-origin: bottom left;
+    position: absolute;
+    left: 3.1008%;
+    right: 8.5271%;
+    top: 77.1318%;
+    bottom: 22.739%;
+    max-width: 100%;
+    max-height: 100%;
+    border-bottom: solid 1px #fff;
+    margin-bottom: -1px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+  .divAvatar {
+    position: relative;
+    width: 668px;
+    height: 753.9999px;
+    place-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 11px 9px;
+    background-color: #fff0;
+    overflow: hidden;
+  }
+  .image2 {
+    position: absolute;
+    left: 280.5px;
+    top: 11px;
+    width: 108px;
+    height: 106px;
+    background-image:/* webpackIgnore: true */ url('/logoTNTT.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .image1 {
+    position: absolute;
+    left: 9px;
+    top: 141px;
+    width: 650px;
+    height: 602px;
+    border-radius: 31px;
+    background-image:/* webpackIgnore: true */ url('https://storybrain.azureedge.net/figma-to-html/figma-to-html/0b1f32096d12f19cb04b11b2ae7d009cdf98915c');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
