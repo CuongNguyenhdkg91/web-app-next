@@ -48,7 +48,7 @@ export const Component1: FC<Props> = memo(function Component1(props) {
   //console.log(text)
   const DivSet = Object.keys(text).map(key => {
     // console.log(text[key])
-    return <div className={classes[key]} onClick={() => ToggleLocal(!ShowLocal)}>{text[key]}</div>
+    return <div key = {key} className={classes[key]} onClick={() => ToggleLocal(!ShowLocal)}>{text[key]}</div>
   }) 
     
   return ( checkName &&
