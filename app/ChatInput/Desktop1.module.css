@@ -190,7 +190,7 @@
     top: 6px;
     width: 88px;
     height: 114px;
-    background-image:/* webpackIgnore: true */ url('/logo.png');
+    background-image: url('/logo.png'); /* webpackIgnore: true */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -201,7 +201,8 @@
     left: 28px; */
     width: 324px;
     height: 243px;
-    background-image:/* webpackIgnore: true */ url('https://storybrain.azureedge.net/figma-to-html/figma-to-html/5da741e34ccca8afad968ff6ea4cb0117401c222');
+    /* background-image:url('https://storybrain.azureedge.net/figma-to-html/figma-to-html/5da741e34ccca8afad968ff6ea4cb0117401c222'); */
+    /* webpackIgnore: true */ 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,7 +237,8 @@
     top: 11px;
     width: 108px;
     height: 106px;
-    background-image:/* webpackIgnore: true */ url('/logoTNTT.jpg');
+    /* background-image: url('/logoTNTT.jpg');  */
+    /* webpackIgnore: true */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -248,7 +250,8 @@
     width: 650px;
     height: 602px;
     border-radius: 31px;
-    background-image:/* webpackIgnore: true */ url('https://storybrain.azureedge.net/figma-to-html/figma-to-html/0b1f32096d12f19cb04b11b2ae7d009cdf98915c');
+    /* background-image: url('https://storybrain.azureedge.net/figma-to-html/figma-to-html/0b1f32096d12f19cb04b11b2ae7d009cdf98915c'); */
+    /* webpackIgnore: true */ 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

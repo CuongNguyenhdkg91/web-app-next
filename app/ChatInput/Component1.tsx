@@ -22,7 +22,9 @@ interface Props {
     lop1?: string;
     _1?: number;
     xuatSac?: string;
+    content: string;
   };
+  
   format?: {
     maiHan?: ReactNode;
     lop1?: ReactNode;
@@ -56,7 +58,7 @@ export const Component1: FC<Props> = memo(function Component1(props) {
   <div className={classes.maiHan}>{text.maiHan}</div>
   <div className={classes.lop1}>{text.lop1}</div>
   <div className={classes._1}>{text._1}</div>
-  <div className={classes.xuatSac}>{text.xuatSac}</div>
+  <div className={classes.xuatSac} onClick={() => ToggleLocal(!ShowLocal)}>{text.xuatSac}</div>
   </>
 
   return ( checkName &&
@@ -69,7 +71,8 @@ export const Component1: FC<Props> = memo(function Component1(props) {
         </>
         {/* <IconSearchIconIcon className={classes.icon} />, */}
       </div>
-      {ShowLocal && <div className={classesDesktop1.image3}></div>}
+      {ShowLocal && <div className={`${classesDesktop1.image3} bg-[url('${props.text.content}']`}></div>}
+      {/* {ShowLocal && <div className={`${classesDesktop1.image3}`}></div>} */}
     </>
   );
 });
@@ -80,6 +83,7 @@ Component1.defaultProps ={
     lop1: 'Lớp 1',
     _1: 1,
     xuatSac: 'Giỏi',
+    content:''
   }
 }
 
