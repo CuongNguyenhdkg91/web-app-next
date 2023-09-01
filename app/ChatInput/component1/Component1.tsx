@@ -6,10 +6,11 @@ import type { FC, ReactNode } from 'react';
 import classes00 from './Component1.module.css';
 import classesDesktop1 from './Desktop1.module.css';
 import resets from './_resets.module.css';
-import { IconSearchIconIcon } from './IconSearchIconIcon';
+import { IconSearchIconIcon } from '../IconSearchIconIcon';
 
 import useRentModal from '@/zustand/FormShow';
-import { Searching } from '@/zustand/search';
+import {Searching} from '@/zustand/Search';
+
 
 
 

@@ -6,7 +6,7 @@ import classes from './Desktop1.module.css';
 import classes1 from './Component1.module.css';
 import resets from './_resets.module.css';
 import { IconSearchIconIcon } from './IconSearchIconIcon';
-import { Searching } from '@/zustand/search';
+import { Searching } from '@/zustand/Search';
 import { useEffect } from 'react';
 
 
