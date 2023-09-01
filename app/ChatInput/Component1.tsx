@@ -12,8 +12,6 @@ import useRentModal from '@/zustand/FormShow';
 import {Searching} from '@/zustand/Search';
 
 
-
-
 interface Props {
   className?: string;
   classes?: {
@@ -26,7 +24,7 @@ interface Props {
     xuatSac?: string;
   };
   format?: {
-    maiHan: ReactNode;
+    maiHan?: ReactNode;
     lop1?: ReactNode;
     _1?: ReactNode;
     xuatSac?: ReactNode;
@@ -45,12 +43,22 @@ export const Component1: FC<Props> = memo(function Component1(props) {
   const ShowToggle = useRentModal((state) => state.toggle)
 
   const [ShowLocal, ToggleLocal] = useState(false)
-  //console.log(text)
-  const DivSet = Object.keys(text).map(key => {
-    // console.log(text[key])
+  
+  //const keyArray = Object.keys(text) //cannot build with vercel because the type of text not allow a string as index although dev mode is OK
+    //const keyArray =["maiHan", "lop1", "_1", "xuatSac"]
+/*     const DivSet = keyArray.map(key => {
+    const a = Object.keys(text)[0]
+    console.log(a.valueOf())   
     return <div key = {key} className={classes[key]} onClick={() => ToggleLocal(!ShowLocal)}>{text[key]}</div>
-  }) 
-    
+  })  */
+
+  const DivSet = <>
+  <div className={classes.maiHan}>{text.maiHan}</div>
+  <div className={classes.lop1}>{text.lop1}</div>
+  <div className={classes._1}>{text._1}</div>
+  <div className={classes.xuatSac}>{text.xuatSac}</div>
+  </>
+
   return ( checkName &&
     <>
       <div className={`${resets.storybrainResets} ${props.classes?.root || ''} ${props.className || ''} ${classes.root} flex-row`}>
