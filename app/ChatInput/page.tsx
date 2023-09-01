@@ -54,7 +54,7 @@ const ChatPage = () => {
           <input onChange={(e)=>Search(e.target.value)} />
           
 
-          <Component1 />
+          {/* <Component1 /> */}
           <Component1
             // className={classes.component1}
             text={{
@@ -64,7 +64,7 @@ const ChatPage = () => {
               xuatSac: 'giỏi',
             }}
           />
-          <Component1 />
+          {/* <Component1 /> */}
           {/* <div className={classes.image3}></div> */}
           <Component1
           text={{
