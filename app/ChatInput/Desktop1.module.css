@@ -250,7 +250,7 @@
     width: 650px;
     height: 602px;
     border-radius: 31px;
-    /* background-image: url('https://storybrain.azureedge.net/figma-to-html/figma-to-html/0b1f32096d12f19cb04b11b2ae7d009cdf98915c'); */
+    background-image: url('https://storybrain.azureedge.net/figma-to-html/figma-to-html/0b1f32096d12f19cb04b11b2ae7d009cdf98915c');
     /* webpackIgnore: true */ 
     background-position: center;
     background-repeat: no-repeat;
@@ -258,42 +258,7 @@
   }
 
 
-  .storybrainResets,
-.storybrainResets * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background: none;
-  /* border: none; conflict with the style of border even use tailwind not work */
+ 
 
-  flex-shrink: 0;
-  text-decoration: none;
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.storybrainResets,
-.storybrainResets :not(span, a, ul, ol, li, p) {
-  display: flex;
-}
-
-.storybrainResets ul,
-.storybrainResets ol {
-  text-indent: 0;
-  padding-inline-start: 1.5em;
-}
-
-.storybrainResets p:empty::before {
-  content: '';
-  display: inline-block;
-}
-
-.storybrainResets img {
-  object-fit: contain;
-}
-
-.storybrainResets svg {
-  overflow: visible;
-}
 
   

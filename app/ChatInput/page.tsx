@@ -2,13 +2,12 @@
 import { Component1 } from './Component1';
 
 
-import classes from './page.module.css';
-//import resets from './_resets.module.css';
+import classes from './Desktop1.module.css';
+import resets from './_resets.module.css';
 
 import { IconSearchIconIcon } from './IconSearchIconIcon';
 import { Searching } from '@/zustand/Search';
 import { useEffect, useState } from 'react';
-import { global } from 'styled-jsx/css';
 
 export type Post = {
   id?: string;
@@ -38,15 +37,15 @@ const ChatPage = () => {
     //         console.log(error)
     //       }
     //     }
-
     // const StoreData = GetData()
-    const [DataStore, GetData] = useState([{title: 'Mèo', grade: '12',content:''}])
+
+    const [DataStore, GetData] = useState([{title: 'Tên Học sinh', grade: '',content:''}])
 
     useEffect(() =>  {
           fetch("https://web-app-next-lac.vercel.app/api/GetPost/1")
           .then(response => response.json())
           .then((data: Post[]) =>  {
-            //console.log(data)
+            console.log(data)
             const DataFilter = data.filter(item =>{
                      return item.published === false
              }) 
@@ -55,7 +54,7 @@ const ChatPage = () => {
         },[]);
 
     //console.log(StoreData)
-    
+   
     // const item = DataStore[0]   
 /*     const text = {
       maiHan: item.title,
@@ -63,9 +62,10 @@ const ChatPage = () => {
       _1: 1,
       xuatSac: 'giỏi',
     }    */   
+
     return (
     //  <div className = "w-full h-p784  bg-[#155250] p-30 flex-1 flex-wrap items-center">
-    <div className={`${classes.storybrainResets} ${classes.root}`}>
+    <div className={`${resets.storybrainResets} ${classes.root}`}>
         <div className={`${classes.divList} flex-col`}>
           <div className={classes.chuaThanhLinh1}></div>
           <div className={classes.gIAOXUUcMeVoNhiemHonAt}>GIÁO XỨ Đức Mẹ Vô Nhiễm Hòn Đất</div>

@@ -92,15 +92,3 @@
     flex-direction: column;
   }
   
-  .image3 {
-    /* position: absolute;
-    top: 347px;
-    left: 28px; */
-    width: 324px;
-    height: 243px;
-    background-image:url('https://storybrain.azureedge.net/figma-to-html/figma-to-html/5da741e34ccca8afad968ff6ea4cb0117401c222');
-    /* webpackIgnore: true; */ 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
