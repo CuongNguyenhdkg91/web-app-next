@@ -80,7 +80,7 @@ const ChatPage = () => {
               xuatSac: 'giỏi',
               content: item.content
             }
-            return <Component1 text ={text}/>
+            return <Component1 key = 'maiHan' text ={text}/>
           })}
 
 
