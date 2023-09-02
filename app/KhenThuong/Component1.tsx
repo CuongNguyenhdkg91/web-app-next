@@ -36,7 +36,10 @@ interface Props {
 }
 /* @figmaId 5:9 */
 
-export const Component1: FC<Props> = memo(function Component1(props) {
+//add memo but not understand how to use cause some problem of the image show
+//export const Component1: FC<Props> = memo(function Component1(props) {
+
+export const Component1: FC<Props> = (props) => {
   const classes = props.format !=null ? classes00 : classes00
   const {text} = props
   
@@ -84,7 +87,7 @@ export const Component1: FC<Props> = memo(function Component1(props) {
       {/* {ShowLocal && <div className={`${classesDesktop1.image3}`}></div>} */}
     </>
   );
-});
+};
 
 Component1.defaultProps ={
   text: {

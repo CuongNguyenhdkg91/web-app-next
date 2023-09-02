@@ -1,5 +1,6 @@
 'use client'
 import { Component1 } from './Component1';
+var unidecode = require('unidecode')
 
 
 import classes from './Desktop1.module.css';
@@ -39,7 +40,7 @@ const ChatPage = () => {
     //     }
     // const StoreData = GetData()
 
-    const sampleItem = {title: 'Họ và Tên của bạn học sinh', grade: '',content:'https://scontent.fsgn5-10.fna.fbcdn.net/v/t1.15752-9/371247798_816837566567791_1883408416639496517_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=HuWOowtD7NIAX_Wa2JV&_nc_ht=scontent.fsgn5-10.fna&oh=03_AdTJQ5xTA_F9F5-KFDXU-7hJoU3V3jo5JZrdf0coBEaKpg&oe=651A9252'}
+    const sampleItem = {title: 'Họ và Tên của bạn học sinh', grade: '', note:[''],content:'https://scontent.fsgn5-10.fna.fbcdn.net/v/t1.15752-9/371247798_816837566567791_1883408416639496517_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=HuWOowtD7NIAX_Wa2JV&_nc_ht=scontent.fsgn5-10.fna&oh=03_AdTJQ5xTA_F9F5-KFDXU-7hJoU3V3jo5JZrdf0coBEaKpg&oe=651A9252'}
     const sampleList = Array(10).fill(sampleItem)
     const [DataStore, GetData] = useState(sampleList)
 
@@ -50,23 +51,19 @@ const ChatPage = () => {
             console.log(data)
             const DataFilter = data.filter(item =>{
                      return item.published === false
-             }) 
-            GetData(DataFilter)
+             })
+            const CatTen = (FullName:string) => {
+              return unidecode(FullName.split(' ').slice(-1).toString())
+            } 
+            const DataSort = DataFilter.sort((a:Post,b:Post) => 
+              //CatTen(a.title) > CatTen(b.title) ? 1 : -1 //not good in UX
+              parseInt(a.grade) > parseInt(b.grade) ? 1: -1
+            )
+            GetData(DataSort)
           })
         },[]);
 
-    //console.log(StoreData)
-   
-    // const item = DataStore[0]   
-/*     const text = {
-      maiHan: item.title,
-      lop1: 'Lớp ' + item.grade,
-      _1: 1,
-      xuatSac: 'giỏi',
-    }    */   
-
     return (
-    //  <div className = "w-full h-p784  bg-[#155250] p-30 flex-1 flex-wrap items-center">
     <div className={`${resets.storybrainResets} ${classes.root}`}>
         <div className={`${classes.divList} flex-col`}>
           <div className={classes.chuaThanhLinh1}></div>
@@ -75,11 +72,19 @@ const ChatPage = () => {
           <input className = {classes.TimTen} placeholder='Tìm theo tên' onChange={(e)=>Search(e.target.value)} />
           
           {DataStore.map((item , index) => {
+            //const switcher_result = ['Giỏi','XS:Xuất sắc','TB: Tiêu biểu']
+            //const i = switcher_result.findIndex(item.note)
+            const decodeDanhHieu = () => {
+              if (item.note.includes('XS')) return 'Xuất sắc'
+              else if (item.note.includes('TB')) return 'Tiêu biểu'
+              else return 'Giỏi'
+            }
+
             const text = {
               maiHan: item.title,
               lop1: 'Lớp ' + item.grade,
               _1: index+1,
-              xuatSac: 'Xuất sắc',
+              xuatSac: decodeDanhHieu(),
               content: item.content
             }
             return <Component1 key = 'maiHan' text ={text}/>
