@@ -1,7 +1,7 @@
 .storybrainResets,
 .storybrainResets * {
   box-sizing: border-box;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   background: none;
   /* border: none; conflict with the style of border even use tailwind not work */

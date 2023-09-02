@@ -159,10 +159,13 @@
     overflow: hidden;
   }
   .pHATTHUONG {
-    color: #fff;
+    /* color: #fff; */
+    background-image: linear-gradient(180deg, #f713ffff 0%, #fa64ffff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 40px;
-    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-      'Liberation Sans', sans-serif;
+    font-family: 'Bree Serif';
     /* position: absolute; */
     left: 52px;
     top: 157px;
@@ -172,10 +175,9 @@
     flex-direction: column;
   }
   .gIAOXUUcMeVoNhiemHonAt {
-    color: #fff;
+    color: #FFFB82;
     font-size: 20px;
-    font-family: Bree Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-      'Liberation Sans', sans-serif;
+    font-family: 'Bree Serif';
     /* position: absolute; */
     left: 34px;
     top: 130px;
@@ -255,6 +257,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .TimTen{
+    outline: solid 1px #fffb82;
+    outline-offset: -1px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: inset 0px 2px 1px 0px #fffb82;
+    margin-bottom: 10px;
   }
 
 

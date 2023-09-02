@@ -8,7 +8,7 @@ import classesDesktop1 from './Desktop1.module.css';
 import resets from './_resets.module.css';
 
 import Image from 'next/image';
-import { IconSearchIconIcon } from './IconSearchIconIcon';
+import { IconArrowCollapse, IconImageSearch, IconSearchIconIcon } from './IconIcon';
 
 import useRentModal from '@/zustand/FormShow';
 import {Searching} from '@/zustand/Search';
@@ -47,7 +47,7 @@ export const Component1: FC<Props> = memo(function Component1(props) {
   const ShowToggle = useRentModal((state) => state.toggle)
 
   const [ShowLocal, ToggleLocal] = useState(false)
-  
+
   //const keyArray = Object.keys(text) //cannot build with vercel because the type of text not allow a string as index although dev mode is OK
     //const keyArray =["maiHan", "lop1", "_1", "xuatSac"]
 /*     const DivSet = keyArray.map(key => {
@@ -60,17 +60,23 @@ export const Component1: FC<Props> = memo(function Component1(props) {
   <div className={classes.maiHan}>{text.maiHan}</div>
   <div className={classes.lop1}>{text.lop1}</div>
   <div className={classes._1}>{text._1}</div>
-  <div className={classes.xuatSac} onClick={() => ToggleLocal(!ShowLocal)}>{text.xuatSac}</div>
+  <div className={classes.xuatSac} onClick={() => {ToggleLocal(!ShowLocal)}}>{text.xuatSac}</div>
+  <div className="absolute right-3 top-5" >
+    <div onClick={() => {}}>
+      {(!ShowLocal) && <IconImageSearch className="text-[#f713ffff]" width={25} height = {40} />}
+      {(ShowLocal) &&<IconArrowCollapse className="text-[#f713ffff]" width={25} height = {40} />} 
+    </div>
+  </div>
   </>
 
   return ( checkName &&
     <>
       <div className={`${resets.storybrainResets} ${props.classes?.root || ''} ${props.className || ''} ${classes.root} flex-row`}>
         {/* <div className="absolute right-0 left-0 botto/m-[10px] border-b border-solid border-white"></div> */}
-        <div className={classes.line1}></div>  
         <>
           {DivSet}
         </>
+        <div className={classes.line1}></div>  
         {/* <IconSearchIconIcon className={classes.icon} />, */}
       </div>
       {ShowLocal && <Image src={text.content} width={320} height={240} alt='Giấy khen'></Image>}
