@@ -2,12 +2,13 @@
 import { Component1 } from './Component1';
 
 
-import classes from './Desktop1.module.css';
-import classes1 from './Component1.module.css';
-import resets from './_resets.module.css';
+import classes from './page.module.css';
+//import resets from './_resets.module.css';
+
 import { IconSearchIconIcon } from './IconSearchIconIcon';
 import { Searching } from '@/zustand/Search';
 import { useEffect, useState } from 'react';
+import { global } from 'styled-jsx/css';
 
 export type Post = {
   id?: string;
@@ -64,7 +65,7 @@ const ChatPage = () => {
     }    */   
     return (
     //  <div className = "w-full h-p784  bg-[#155250] p-30 flex-1 flex-wrap items-center">
-    <div className={`${resets.storybrainResets} ${classes.root}`}>
+    <div className={`${classes.storybrainResets} ${classes.root}`}>
         <div className={`${classes.divList} flex-col`}>
           <div className={classes.chuaThanhLinh1}></div>
           <div className={classes.gIAOXUUcMeVoNhiemHonAt}>GIÁO XỨ Đức Mẹ Vô Nhiễm Hòn Đất</div>
@@ -110,3 +111,5 @@ const ChatPage = () => {
   }
 
 export default ChatPage
+
+

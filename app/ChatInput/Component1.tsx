@@ -4,8 +4,9 @@ import { memo, useState } from 'react';
 import type { FC, ReactNode } from 'react';
 
 import classes00 from './Component1.module.css';
-import classesDesktop1 from './Desktop1.module.css';
+//import classesDesktop1 from './Desktop1.module.css';
 import resets from './_resets.module.css';
+
 import { IconSearchIconIcon } from './IconSearchIconIcon';
 
 import useRentModal from '@/zustand/FormShow';
@@ -71,7 +72,7 @@ export const Component1: FC<Props> = memo(function Component1(props) {
         </>
         {/* <IconSearchIconIcon className={classes.icon} />, */}
       </div>
-      {ShowLocal && <div className={`${classesDesktop1.image3} bg-[url('${props.text.content}']`}></div>}
+      {ShowLocal && <div className={`${classes.image3} bg-[url('${props.text.content}']`}></div>}
       {/* {ShowLocal && <div className={`${classesDesktop1.image3}`}></div>} */}
     </>
   );
