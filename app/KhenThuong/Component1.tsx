@@ -65,7 +65,7 @@ export const Component1: FC<Props> = (props) => {
   <div className={classes._1}>{text._1}</div>
   <div className={classes.xuatSac} onClick={() => {ToggleLocal(!ShowLocal)}}>{text.xuatSac}</div>
   <div className="absolute right-3 top-5" >
-    <div onClick={() => {}}>
+    <div onClick={() => {ToggleLocal(!ShowLocal)}}>
       {(!ShowLocal) && <IconImageSearch className="text-[#f713ffff]" width={25} height = {40} />}
       {(ShowLocal) &&<IconArrowCollapse className="text-[#f713ffff]" width={25} height = {40} />} 
     </div>
