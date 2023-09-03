@@ -1,4 +1,6 @@
 'use client'
+
+import Head from 'next/head';
 import { Component1 } from './Component1';
 var unidecode = require('unidecode')
 
@@ -65,6 +67,10 @@ const ChatPage = () => {
         },[]);
 
     return (
+    <>
+      <Head>
+        <title>My page title</title>
+      </Head>
     <div className={`${resets.storybrainResets} ${classes.root}`}>
         <div className={`${classes.divList} flex-col`}>
           <div className={classes.chuaThanhLinh1}></div>
@@ -115,6 +121,7 @@ const ChatPage = () => {
           {/* <div className={classes.image1}></div> */}
         </div>
      </div>
+     </>
     )
   }
 
