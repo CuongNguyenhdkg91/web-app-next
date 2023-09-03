@@ -40,7 +40,7 @@ const ChatPage = () => {
     //     }
     // const StoreData = GetData()
 
-    const sampleItem = {title: 'Họ và Tên của bạn học sinh', grade: '', note:[''],content:'https://scontent.fsgn5-10.fna.fbcdn.net/v/t1.15752-9/371247798_816837566567791_1883408416639496517_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=HuWOowtD7NIAX_Wa2JV&_nc_ht=scontent.fsgn5-10.fna&oh=03_AdTJQ5xTA_F9F5-KFDXU-7hJoU3V3jo5JZrdf0coBEaKpg&oe=651A9252'}
+    const sampleItem = {title: 'Mạng dữ liệu đang chờ tải xuống', grade: '', note:[''],content:'https://scontent.fsgn5-10.fna.fbcdn.net/v/t1.15752-9/371247798_816837566567791_1883408416639496517_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=HuWOowtD7NIAX_Wa2JV&_nc_ht=scontent.fsgn5-10.fna&oh=03_AdTJQ5xTA_F9F5-KFDXU-7hJoU3V3jo5JZrdf0coBEaKpg&oe=651A9252'}
     const sampleList = Array(10).fill(sampleItem)
     const [DataStore, GetData] = useState(sampleList)
 
@@ -61,6 +61,7 @@ const ChatPage = () => {
             )
             GetData(DataSort)
           })
+          .catch(error => {console.log('Rất tiếc, không tải được dữ liệu vào lúc này!')})
         },[]);
 
     return (
