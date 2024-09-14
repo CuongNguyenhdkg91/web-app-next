@@ -3,7 +3,6 @@
 import { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import MenuItem from "./MenuItem";
-import useRentModal from "@/zustand/FormShow";
 import { useRouter } from "next/navigation";
 
 
@@ -12,22 +11,16 @@ const  UserMenu = () => {
     const router = useRouter()
 
     const [isOpen, setIsOpen] = useState(false)
-    
-    const CreateNew = useRentModal()
 
     const toggleOpen = useCallback(() => {
         setIsOpen((state) => !state)
     },[])
-
-    const onCreateNew = useCallback(() => {
-        CreateNew.onOpen()
-    },[CreateNew])
-
+   
     return(
-        <div className="relative">
+        <div className="hidden relative md:block">
             <div className="flex flex-row items-center gap-3">
-                <div onClick={onCreateNew}
-                    className="hidden md:block text-sm font-semibold py-3 px-4 
+                <div
+                    className="text-sm font-semibold py-3 px-4 
                     rounded-full hover:bg-neutral-100 transition cursor-pointer
                     ">
                     Action to Do
@@ -45,12 +38,26 @@ const  UserMenu = () => {
                         rounded-xl shadow-md bg-white overflow-hidden
                         ">
                     <MenuItem
-                    onClick={()=>{router.push('/ChatInput')}}
-                    label = "Chat to Add" />
-
+                    onClick={toggleOpen}
+                    label = "ChatToAdd" />
                     <MenuItem
-                    onClick={()=>{router.push('/CreateNew')}}
-                    label = "Create by Form" />
+                    onClick={toggleOpen}
+                    path='EditInfo'
+                    label = "Form" />
+                    <MenuItem
+                    onClick={toggleOpen}
+                    path='Activity'
+                    label = "Community"/>
+                    <MenuItem
+                    onClick={toggleOpen}
+                    label = "Document"/>
+                    <MenuItem
+                    onClick={()=>{}}
+                    label = "Login"/>
+                    <MenuItem
+                    onClick={()=>{}}
+                    label = "Extra"/>
+
                 </div>
             )}
         </div>

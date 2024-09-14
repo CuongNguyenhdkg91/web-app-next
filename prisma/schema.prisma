@@ -1,6 +1,8 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+//create a StaticInfo as a database or a group of table that contain updatable information of website
+
 generator client {
   provider = "prisma-client-js"
   
@@ -36,4 +38,11 @@ model ThieuNhi {
   id       String    @id @map("_id") @default(auto()) @db.ObjectId
   FullName  String
   createdAt     DateTime  @default(now())
+}
+
+model Employee{
+  id String @id @map("_id") @default (auto()) @db.ObjectId
+  FullName String
+  YearDate Int
+  createdAt DateTime @default(now())
 }

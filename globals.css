@@ -7,32 +7,109 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-} */
-
-:root{
-  height: 100%;
+body {
+  background: linear-gradient(to right, grey,white 5% 90%, grey)
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+
+ul{
+  display: flex;
+
+  li{
+    list-style-type: none;
+    padding: 12px;
+    font-size: 18px;
+    }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.footer {
+  .signature {
+    font-size: 40pt;
+
+    img{
+      width:120px;
+    }
+  }
+  .section_links{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .section_links_title{
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
 }
+.wrapper-LoginModal{
+  div{
+    border-radius: inherit;
+    border-color: inherit;
+  }
+  img{
+    height: 100%;
+  }
+}
+
+@keyframes riseUp {
+  0%{
+    transform: translateY(-4px)
+  }
+  100%{
+    transform: translateY(0)
+  }
+}
+
+
+.instruction {
+  display: flex;
+  flex-direction: row;
+
+  .symbolSet{
+    color:yellowgreen;
+  }
+
+  strong{
+    font-size: 16pt;
+    color:#f79f1f;
+  }
+
+  strong span {
+  font-size:14pt;
+  color:rgb(225,35,120);
+  padding-left: 5px;
+  }
+
+  .imgBox{
+  width: 50%;
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+  border-radius: 25px;
+  padding: 0;
+  }
+  
+  p{
+  font-size: 14pt;
+  margin-top: 0;
+  }
+
+  .font-awesome::before{
+    font-family: FontAwesome;
+    content:'\f017';
+    font-size: 40pt;
+    color:green
+  }
+
+}
+
+
 
 

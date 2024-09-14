@@ -7,10 +7,10 @@ const Logo = () => {
   const router = useRouter();
 
   return ( 
-    <Image
+    <img
       onClick={() => router.push('/')}
-      className="hidden md:block cursor-pointer" 
-      src="/logo.png" height="80" width="80" alt="Logo" />
+      className="block cursor-pointer" 
+      src="/logo.png" height="80" width="80" alt="Logo" /> //if use Image of next the optimization may make not update in dev env
    );
 }
  

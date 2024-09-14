@@ -40,7 +40,6 @@ const FormTemplate: React.FC<ModalProps> = ({
     if (disabled) {
       return;
     }
-  
     setShowModal(false);
     setTimeout(() => {
       onClose();
@@ -69,12 +68,12 @@ const FormTemplate: React.FC<ModalProps> = ({
     return(
         <>
       <div id ="bao ngoai" 
-          className="fixed inset-0 z-50 justify-center items-center flex bg-neutral-800/70
+          className="relative inset-0 z-50 justify-center items-center flex bg-neutral-800/70
                   overflow-x-hidden overflow-y-auto outline-none focus:outline-none"
       >
         <div id ="bao trong" 
-              className="relative w-full
-                        md:w-4/6 lg:w-3/6 xl:w-2/5
+              className="relative md:w-full
+                        w-4/6
                         my-6 mx-auto h-full lg:h-auto md:h-auto"
         >
           {/*content*/}
@@ -84,7 +83,7 @@ const FormTemplate: React.FC<ModalProps> = ({
                 `}
           >
             <div className="relative flex flex-col translate
-              w-full h-full lg:h-auto md:h-screen
+              w-full h-full md:h-screen
               border-0 rounded-lg shadow-lg bg-white outline-none focus:outline-none
             ">
               

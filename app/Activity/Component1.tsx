@@ -5,12 +5,10 @@ import type { FC, ReactNode } from 'react';
 
 import classes00 from './Component1.module.css';
 import classesDesktop1 from './Desktop1.module.css';
-import resets from './_resets.module.css';
 
 import Image from 'next/image';
 import { IconArrowCollapse, IconImageSearch, IconSearchIconIcon } from './IconIcon';
 
-import useRentModal from '@/zustand/FormShow';
 import {Searching} from '@/zustand/Search';
 
 
@@ -40,14 +38,14 @@ interface Props {
 //export const Component1: FC<Props> = memo(function Component1(props) {
 
 export const Component1: FC<Props> = (props) => {
-  const classes = props.format !=null ? classes00 : classes00
+  const classes = props.format !=null ? classes00 : classes00 //define class
   const {text} = props
   
   const SearchName = Searching((state) => state.text)
   const checkName = text.maiHan.toLowerCase().includes(SearchName.toLowerCase())
 
-  const Show = useRentModal((state) => state.isOpen)
-  const ShowToggle = useRentModal((state) => state.toggle)
+  //const Show = useRentModal((state) => state.isOpen)
+  //const ShowToggle = useRentModal((state) => state.toggle)
 
   const [ShowLocal, ToggleLocal] = useState(false)
 
@@ -64,17 +62,17 @@ export const Component1: FC<Props> = (props) => {
   <div className={classes.lop1}>{text.lop1}</div>
   <div className={classes._1}>{text._1}</div>
   <div className={classes.xuatSac} onClick={() => {ToggleLocal(!ShowLocal)}}>{text.xuatSac}</div>
-  <div className="absolute right-3 top-5" >
+  <div className="absolute right-3 bottom-0.5" >
     <div onClick={() => {ToggleLocal(!ShowLocal)}}>
-      {(!ShowLocal) && <IconImageSearch className="text-[#f713ffff]" width={25} height = {40} />}
-      {(ShowLocal) &&<IconArrowCollapse className="text-[#f713ffff]" width={25} height = {40} />} 
+      {(!ShowLocal) && <IconImageSearch className="text-[#f713ffff]" width={25} height = {25} />}
+      {(ShowLocal) &&<IconArrowCollapse className="text-[#f713ffff]" width={25} height = {25} />} 
     </div>
   </div>
   </>
 
   return ( checkName &&
     <>
-      <div className={`${resets.storybrainResets} ${props.classes?.root || ''} ${props.className || ''} ${classes.root} flex-row`}>
+      <div className={`${props.classes?.root || ''} ${props.className || ''} ${classes.root} flex-row`}>
         {/* <div className="absolute right-0 left-0 botto/m-[10px] border-b border-solid border-white"></div> */}
         <>
           {DivSet}
