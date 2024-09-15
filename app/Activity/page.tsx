@@ -1,15 +1,15 @@
+//UX for the waiting time of Dang Tai ... no need for server cache 1 use 1 million
+
 'use client'
-//filter UI
+import GetData from './action';
 
 import { Component1 } from './Component1';
-var unidecode = require('unidecode')
-
-
 import classes from './Desktop1.module.css';
 
 import { IconImageSearch, IconSearchIconIcon } from './IconIcon';
 import { Searching } from '@/zustand/Search';
 import { useEffect, useState } from 'react';
+
 
 export type Post = {
   id?: string;
@@ -21,49 +21,17 @@ export type Post = {
   note: string[]
 };
 
-const ChatPage = () => {
+function ChatPage() {
     
-    const Search = Searching((state) => state.setText) 
+    // const Search = Searching((state) => state.setText) 
 
-    // const GetData = async () => {
-    //   try {
-    //       const response = await fetch('localhost:3000/api/GetPost')
-    //       const json = await response.json()
-    //       console.log(json)
-    //       return json 
-    //       /* const GetData = json.filter(item =>{
-    //         return item.published === false
-    //     }) */
-    //       }
-    //   catch (error){
-    //         console.log(error)
-    //       }
-    //     }
-    // const StoreData = GetData()
-
-    const sampleItem = {title: 'Mạng dữ liệu đang chờ tải xuống', grade: '', note:[''],content:'https://scontent.fsgn5-10.fna.fbcdn.net/v/t1.15752-9/371247798_816837566567791_1883408416639496517_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=HuWOowtD7NIAX_Wa2JV&_nc_ht=scontent.fsgn5-10.fna&oh=03_AdTJQ5xTA_F9F5-KFDXU-7hJoU3V3jo5JZrdf0coBEaKpg&oe=651A9252'}
+    const sampleItem = {title: 'Đang tải .......', grade: '', note:[''],content:'https://scontent.fsgn5-10.fna.fbcdn.net/v/t1.15752-9/371247798_816837566567791_1883408416639496517_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=HuWOowtD7NIAX_Wa2JV&_nc_ht=scontent.fsgn5-10.fna&oh=03_AdTJQ5xTA_F9F5-KFDXU-7hJoU3V3jo5JZrdf0coBEaKpg&oe=651A9252'}
     const sampleList = Array(10).fill(sampleItem)
-    const [DataStore, GetData] = useState(sampleList)
 
-    useEffect(() =>  {
-          fetch("https://web-app-next-lac.vercel.app/api/GetPost/1")
-          .then(response => response.json())
-          .then((data: Post[]) =>  {
-            console.log(data)
-            const DataFilter = data.filter(item =>{
-                     return item.published === false
-             })
-            const CatTen = (FullName:string) => {
-              return unidecode(FullName.split(' ').slice(-1).toString())
-            } 
-            const DataSort = DataFilter.sort((a:Post,b:Post) => 
-              //CatTen(a.title) > CatTen(b.title) ? 1 : -1 //not good in UX
-              parseInt(a.grade) > parseInt(b.grade) ? 1: -1
-            )
-            GetData(DataSort)
-          })
-          .catch(error => {console.log('Rất tiếc, không tải được dữ liệu vào lúc này!')})
-        },[]);
+    const  [DataStore, UpdateData] = useState(sampleList)
+    useEffect(() => {
+      GetData().then(data => UpdateData(data))
+   },[])
 
     return (
     <div id="main" className="bg-[#212e3a] text-white flex flex-row justify-around">
@@ -72,7 +40,7 @@ const ChatPage = () => {
           <div className="text-[#FFFB82] text-xl">Giáo Xứ Đức Mẹ Vô Nhiễm Hòn Đất</div>
           <div className={`${classes.divList} flex-col`}>
             <div className={classes.pHATTHUONG}>PHÁT THƯỞNG</div>
-            <input className = {classes.TimTen} placeholder='Tìm theo tên' onChange={(e)=>Search(e.target.value)} />
+            {/* <input className = {classes.TimTen} placeholder='Tìm theo tên' onChange={(e)=>Search(e.target.value)} /> */}
             
             {DataStore.map((item , index) => {
               //const switcher_result = ['Giỏi','XS:Xuất sắc','TB: Tiêu biểu']

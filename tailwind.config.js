@@ -5,23 +5,22 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors:{
+      'purpleBg': '#232d4f',
+      'purpleTxt': 'rgb(142, 155, 209)',
+      'blue': '#0057FF',
+    },
 
     extend: {
-/*       backgroundImage: {
+      /* backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       }, */
-      colors:{
-        'purpleBg': '#232d4f',
-        'purpleTxt': 'rgb(142, 155, 209)',
-        'blue': '#0057FF',
-      },
     },
 
     screens: {
       'md': {max:'500px'}
     }
   },
-
   plugins: [],
 }
