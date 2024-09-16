@@ -1,7 +1,9 @@
 //replace logo with an animation icons svg library
-
+'use client'
+import auth from "./action"
 const page = () => {
     return(
+    <form action ={auth} >
         <div className="wrapper-LoginModal mt-8 mb-[300px] p-8 border-solid rounded-md border border-black max-w-[25cm]">
             <div className="flex flex-col gap-5 text-center text-base">
                 <div className = "h-14 px-0">
@@ -20,13 +22,18 @@ const page = () => {
                     </div>
                 </div>
                 <div>Or continue with email</div>
-                <div className="h-16 flex bg-white border border-black border-solid box-border p-2.5">Email address </div>
-                <div className="h-16 flex bg-white border border-black border-solid box-border p-2.5">Password </div>
+                <div className="h-16 flex bg-white border border-black border-solid box-border p-2.5">Email address 
+                </div>
+                <div className="h-16 flex bg-white border border-black border-solid box-border p-2.5">
+                    Password
+                    <input id="password" name="pass" type="password" />
+                </div>
                 <div className="text-right">Forgot your password</div>
-                <div className="border border-solid h-10 flex items-center justify-center">Log in</div>
+                <button type="submit" className="border border-solid h-10 flex items-center justify-center">Log in</button>
                 <div>Don't have an account? <span>Create an account</span></div>
             </div>
         </div>
+    </form>
     )
 }
 

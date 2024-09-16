@@ -1,5 +1,5 @@
 'use client'
-
+import { verifyAuth } from "./action"
 import Container from "./Container"
 import Logo from "./Logo"
 import UserMenu from "./UserMenu"
@@ -17,7 +17,7 @@ const Navbar = () => {
               <Logo />
               <div className = "flex flex-row justify-between md:hidden">
                 <ul>
-                  <li><Link href="/EditInfo" > Forms </Link></li>
+                  <li className = "hover:cursor-pointer" onClick = {()=> {verifyAuth().then((isAuth) => {if(isAuth){router.push('/EditInfo')}})}} > Forms </li>
                   <li><Link href="/Activity" > Community </Link></li>
                   <li><Link href="/MediaCreate" > Media Make </Link></li>
                 </ul>
