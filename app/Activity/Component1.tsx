@@ -57,29 +57,30 @@ export const Component1: FC<Props> = (props) => {
     return <div key = {key} className={classes[key]} onClick={() => ToggleLocal(!ShowLocal)}>{text[key]}</div>
   })  */
 
-  const DivSet = <>
-  <div className={classes.maiHan}>{text.maiHan}</div>
-  <div className={classes.lop1}>{text.lop1}</div>
-  <div className={classes._1}>{text._1}</div>
-  <div className={classes.xuatSac} onClick={() => {ToggleLocal(!ShowLocal)}}>{text.xuatSac}</div>
-  <div className="absolute right-3 bottom-0.5" >
-    <div onClick={() => {ToggleLocal(!ShowLocal)}}>
-      {(!ShowLocal) && <IconImageSearch className="text-[#f713ffff]" width={25} height = {25} />}
-      {(ShowLocal) &&<IconArrowCollapse className="text-[#f713ffff]" width={25} height = {25} />} 
+  const DivSet =
+  <div className='flex flex-row gap-2 items-center'>
+    <div className={classes._1}>{text._1}</div>
+    <div className='flex flex-col text-left'>
+      <div className={classes.maiHan}>{text.maiHan}</div>
+      <div className={classes.lop1}>{text.lop1}</div>
+    </div>
+    <div className='flex flex-col items-end grow'>
+      <div className={classes.xuatSac} onClick={() => {ToggleLocal(!ShowLocal)}}>{text.xuatSac}</div>
+      <div className="" >
+        <div onClick={() => {ToggleLocal(!ShowLocal)}}>
+          {(!ShowLocal) && <IconImageSearch className="text-[#f713ffff]" width={25} height = {25} />}
+          {(ShowLocal) &&<IconArrowCollapse className="text-[#f713ffff]" width={25} height = {25} />} 
+        </div>
+      </div>
     </div>
   </div>
-  </>
+
 
   return ( checkName &&
-    <>
-      <div className={`${props.classes?.root || ''} ${props.className || ''} ${classes.root} flex-row`}>
-        {/* <div className="absolute right-0 left-0 botto/m-[10px] border-b border-solid border-white"></div> */}
-        <>
-          {DivSet}
-        </>
-        <div className={classes.line1}></div>  
-        {/* <IconSearchIconIcon className={classes.icon} />, */}
-      </div>
+    <> 
+      {DivSet}
+      <div className={classes.line1}></div>  
+      {/* <IconSearchIconIcon className={classes.icon} />, */}      
       {ShowLocal && <Image src={text.content} width={320} height={240} alt='Giấy khen'></Image>}
       {/* {ShowLocal && <div className="w-80 h-60 bg-[url('/../../public/logoTNTT.jpg')]"></div>} */}
       {/* {ShowLocal && <div className={`${classesDesktop1.image3}`}></div>} */}

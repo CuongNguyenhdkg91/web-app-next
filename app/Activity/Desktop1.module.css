@@ -32,19 +32,10 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 40px;
-    font-family: 'Bree Serif';
-    /* position: absolute; */
-    left: 52px;
-    top: 157px;
-    width: min-content;
-    height: min-content;
-    white-space: nowrap;
-    flex-direction: column;
   }
   .gIAOXUUcMeVoNhiemHonAt {
     color: #FFFB82;
     font-size: 20px;
-    font-family: 'Bree Serif';
     /* position: absolute; */
     left: 34px;
     top: 130px;
@@ -92,7 +83,7 @@
   .divAvatar {
     position: relative;
     width: 668px;
-    height: 753.9999px;
+    /* height: 753.9999px; */
     place-content: center;
     align-items: flex-start;
     gap: 24px;
@@ -101,7 +92,7 @@
     overflow: hidden;
   }
   .image2 {
-    position: absolute;
+    /* position: absolute; */
     left: 280.5px;
     top: 11px;
     width: 108px;
