@@ -3,8 +3,7 @@
 import { memo, useState } from 'react';
 import type { FC, ReactNode } from 'react';
 
-import classes00 from './Component1.module.css';
-import classesDesktop1 from './Desktop1.module.css';
+import classes from './Component1.module.css';
 
 import Image from 'next/image';
 import { IconArrowCollapse, IconImageSearch, IconSearchIconIcon } from './IconIcon';
@@ -37,15 +36,12 @@ interface Props {
 //add memo but not understand how to use cause some problem of the image show
 //export const Component1: FC<Props> = memo(function Component1(props) {
 
-export const Component1: FC<Props> = (props) => {
-  const classes = props.format !=null ? classes00 : classes00 //define class
+export const Component1: FC<Props> = memo((props) => {
+
   const {text} = props
   
   const SearchName = Searching((state) => state.text)
   const checkName = text.maiHan.toLowerCase().includes(SearchName.toLowerCase())
-
-  //const Show = useRentModal((state) => state.isOpen)
-  //const ShowToggle = useRentModal((state) => state.toggle)
 
   const [ShowLocal, ToggleLocal] = useState(false)
 
@@ -80,13 +76,10 @@ export const Component1: FC<Props> = (props) => {
     <> 
       {DivSet}
       <div className={classes.line1}></div>  
-      {/* <IconSearchIconIcon className={classes.icon} />, */}      
       {ShowLocal && <Image src={text.content} width={320} height={240} alt='Giấy khen'></Image>}
-      {/* {ShowLocal && <div className="w-80 h-60 bg-[url('/../../public/logoTNTT.jpg')]"></div>} */}
-      {/* {ShowLocal && <div className={`${classesDesktop1.image3}`}></div>} */}
     </>
   );
-};
+});
 
 Component1.defaultProps ={
   text: {

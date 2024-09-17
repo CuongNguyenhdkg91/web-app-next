@@ -52,8 +52,8 @@ const home = () => {
                 </div>
                 <div className="w-1/4 md:w-full p-10 text-center border-solid border-2 rounded-md border-teal-100 hover:shadow-xl shadow-slate-400 hover:-translate-y-1 transition-all">
                     <img src="https://spring.io/img/icons/batch.svg" className="inline-flex items-center w-28 h-28"/>
-                    <h2 className="text-2xl font-bold my-4">Just Code</h2>
-                    <p>Stick to code the World everyday. Create video, snapshot, description to introduce potential user. After neutralize flows of thing already, engage next in code approach</p>
+                    <h2 className="text-2xl font-bold my-4">App Code</h2>
+                    <p>Create video, snapshot, description to introduce potential user. Time flows of thing already neutralize. Engage abstraction the state of world in programming approach</p>
                 </div>
                 <div className="w-1/4 md:w-full p-10 text-center border-solid border-2 rounded-md border-teal-100 hover:shadow-xl shadow-slate-400 hover:-translate-y-1 transition-all">
                     <img src="https://www.anaconda.com/wp-content/uploads/2024/03/Visibility-and-governance_Anaconda-Capabilities-1536x1536.png" className="inline-flex items-center w-28 h-28"/>
