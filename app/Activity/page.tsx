@@ -88,12 +88,12 @@ const ListCert: React.FC<SidebarProps> = ({step}) => {
             <div className="font-awesome"></div>
             <div className="fa fa-spinner fa-3x fa-spin"></div>
           </div>
-          <div className="img-writing">
+          <div className="img-writing pr-2">
             <strong>{title}<span>{subtitle}</span></strong>
             <div className="imgBox">
               <img src={figures[0]} />
             </div>
-            <p>{writing}</p>
+            <p className="text-[white] text-justify">{writing}</p> {/* text-white not effect ? because of p ? */}
           </div>
         </div>
         <hr className="my-2" />
@@ -102,11 +102,11 @@ const ListCert: React.FC<SidebarProps> = ({step}) => {
 
 const NewsPage = () =>{
   return (
-  <div id="main" className="bg-[#212e3a] text-white flex flex-row justify-around flex-wrap">
-    <div className="w-[360px] mx-4 pb-[200px] bg-[aquamarine]">left sidebar
+  <div id="main" className="bg-[#212e3a] text-white flex flex-row justify-between gap-3 flex-wrap">
+    <div className="w-[360px] pb-[200px] bg-[aquamarine]">left sidebar
       <ListCert step={1} />
     </div>
-    <div className="w-3/5">
+    <div className="w-3/5 md:w-full">
       <News
       title = 'KHAI GIẢNG GIÁO LÝ NĂM HỌC 2024-2025'
       subtitle='CHÚA NHẬT 8.9.2024'
@@ -123,7 +123,7 @@ const NewsPage = () =>{
       🪴 Qua việc nhắc lại lời tuyên xưng đức tin và tuyên hứa. Từ nay, các em như những chứng nhân trưởng thành, sẵn sàng sống đức tin mà mình đã tuyên hứa giữa thế giới.'
      />
     </div>
-    <div className="w-[200px] mx-4 bg-[bisque]">right side bar</div>
+    <div className="max-w-[250px] flex-grow bg-[bisque]">right side bar</div>
   </div>
 )}
 

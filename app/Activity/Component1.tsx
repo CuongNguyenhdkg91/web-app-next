@@ -33,10 +33,9 @@ interface Props {
 }
 /* @figmaId 5:9 */
 
-//add memo but not understand how to use cause some problem of the image show
 //export const Component1: FC<Props> = memo(function Component1(props) {
 
-export const Component1: FC<Props> = memo((props) => {
+export const Component1: FC<Props> = memo(function Component1(props){
 
   const {text} = props
   

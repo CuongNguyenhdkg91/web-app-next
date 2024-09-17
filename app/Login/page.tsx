@@ -30,7 +30,7 @@ const page = () => {
                 </div>
                 <div className="text-right">Forgot your password</div>
                 <button type="submit" className="border border-solid h-10 flex items-center justify-center">Log in</button>
-                <div>Don't have an account? <span>Create an account</span></div>
+                <div>Dont have an account? <span>Create an account</span></div>
             </div>
         </div>
     </form>

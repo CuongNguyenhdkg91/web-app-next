@@ -67,9 +67,6 @@ ul{
 
 
 .instruction {
-  display: flex;
-  flex-direction: row;
-
   .symbolSet{
     color:yellowgreen;
   }
