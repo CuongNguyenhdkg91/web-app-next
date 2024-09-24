@@ -6,7 +6,7 @@ module.exports = nextConfig */
 
 module.exports = {
     images: {
-      remotePatterns: [
+/*       remotePatterns: [
         {
           protocol: 'https',
           hostname: 'images.unsplash.com',
@@ -32,7 +32,14 @@ module.exports = {
           port: '',
           pathname: '/**',
         },
-      ],
+      ], */
+      remotePatterns: [
+        {
+          protocol:'https',
+          hostname:'*',
+          pathname:'/**'
+        }
+      ]
     },
     
     async headers() {

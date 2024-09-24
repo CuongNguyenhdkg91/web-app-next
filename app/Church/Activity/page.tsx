@@ -85,8 +85,7 @@ const ListCert: React.FC<SidebarProps> = ({step}) => {
         <div className="instruction flex flex-row">
           <div>
             <IconWatch />
-            <div className="font-awesome"></div>
-            <div className="fa fa-spinner fa-3x fa-spin"></div>
+            <div className="mt-4 fa fa-spinner fa-3x fa-spin text-[yellow]"></div>
           </div>
           <div className="img-writing pr-2">
             <strong>{title}<span>{subtitle}</span></strong>

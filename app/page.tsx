@@ -13,13 +13,14 @@
 // insert the document link to code into the element or use function event Onclick fetch link from database server can show list link to pick
 
 // prepare a dark mode
+import Image from "next/image"
 
 const home = () => {
     return (
         <div> 
             <div className="grid grid-cols-2 grid-rows-2 mb-5 mt-5">
-                <div className="col-start-2 justify-self-center">In Person & virtual </div>
-                <div className="col-start-2 bg-blue text-white justify-self-center py-3 px-6 uppercase rounded-lg">get ticket</div>
+                <div className="col-start-2 justify-self-center"> Genuine Developers </div>
+                <div className="col-start-2 bg-blue text-white justify-self-center py-3 px-6 uppercase rounded-lg">Get in</div>
             </div>
             
             <div>
@@ -37,7 +38,7 @@ const home = () => {
                 </a>
             </div>
             
-            <div className="flex flex-wrap m-10 gap-10 justify-center">
+            <div className="flex flex-wrap m-10 gap-10 justify-center"> {/* move href stack to hot Q&A */}
                 <div className="w-1/4 md:w-full p-6 text-center border-solid border-2 rounded-md border-teal-100 hover:shadow-xl shadow-slate-400 hover:-translate-y-1 transition-all">
                     <a href="https://stackoverflow.com/questions/65086108/next-js-link-vs-router-push-vs-a-tag" target="_blank">
                         <img src="https://spring.io/img/icons/reactive.svg" className="inline-flex items-center w-28 h-28"/>
@@ -51,9 +52,11 @@ const home = () => {
                     <p>Grab edging technolgy in two way. Pull from the world and push your idea. Connect and scale your services, whatever your platform.</p>
                 </div>
                 <div className="w-1/4 md:w-full p-10 text-center border-solid border-2 rounded-md border-teal-100 hover:shadow-xl shadow-slate-400 hover:-translate-y-1 transition-all">
-                    <img src="https://spring.io/img/icons/batch.svg" className="inline-flex items-center w-28 h-28"/>
-                    <h2 className="text-2xl font-bold my-4">App Code</h2>
-                    <p>Create video, snapshot, description to introduce potential user. Time flows of thing already neutralize. Engage abstraction the state of world in programming approach</p>
+                    <a href="/Mechanics" target="_blank">
+                        <img src="https://spring.io/img/icons/batch.svg" className="inline-flex items-center w-28 h-28"/>
+                        <h2 className="text-2xl font-bold my-4">App Code</h2>
+                        <p>Create video, snapshot to introduce. Practice trending mechanic & algorithm in programming features</p>
+                    </a>
                 </div>
                 <div className="w-1/4 md:w-full p-10 text-center border-solid border-2 rounded-md border-teal-100 hover:shadow-xl shadow-slate-400 hover:-translate-y-1 transition-all">
                     <img src="https://www.anaconda.com/wp-content/uploads/2024/03/Visibility-and-governance_Anaconda-Capabilities-1536x1536.png" className="inline-flex items-center w-28 h-28"/>
@@ -69,8 +72,8 @@ const home = () => {
                 </div>
             </div>
 
-            <div >
-                <img src="https://captintructuyen.evnspc.vn/Images/FileHinh/ArticleN/Guest/2024/2/t20_hoangsa_anh-3-dien-mat-troi-mai-nha-cty-acom_20240211220101.jpg"/>
+            <div>
+                <img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_lossy/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5310e054-6284-4048-add2-8fea3efcba5e_1457x1536.gif" />
             </div>
         </div>
     )

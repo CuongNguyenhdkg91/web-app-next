@@ -1,5 +1,7 @@
 'use client'
 
+import { Oswald, Pacifico } from 'next/font/google';
+
 import { memo, useState } from 'react';
 import type { FC, ReactNode } from 'react';
 
@@ -33,6 +35,15 @@ interface Props {
 }
 /* @figmaId 5:9 */
 
+const pacifico = Pacifico({
+  weight:['400'],
+  subsets: ['vietnamese']
+})
+const oswald = Oswald({
+  subsets: ['vietnamese']
+})
+
+
 //export const Component1: FC<Props> = memo(function Component1(props) {
 
 export const Component1: FC<Props> = memo(function Component1(props){
@@ -54,13 +65,13 @@ export const Component1: FC<Props> = memo(function Component1(props){
 
   const DivSet =
   <div className='flex flex-row gap-2 items-center'>
-    <div className={classes._1}>{text._1}</div>
+    <div className={`${classes._1} ${oswald.className}`}>{text._1}</div>
     <div className='flex flex-col text-left'>
-      <div className={classes.maiHan}>{text.maiHan}</div>
-      <div className={classes.lop1}>{text.lop1}</div>
+      <div className={`${classes.maiHan} ${pacifico.className}`}>{text.maiHan}</div>
+      <div className={`text-lg ${pacifico.className} text-[white]`}>{text.lop1}</div>
     </div>
     <div className='flex flex-col items-end grow'>
-      <div className={classes.xuatSac} onClick={() => {ToggleLocal(!ShowLocal)}}>{text.xuatSac}</div>
+      <div className={`${classes.xuatSac} ${oswald.className}`} onClick={() => {ToggleLocal(!ShowLocal)}}>{text.xuatSac}</div>
       <div className="" >
         <div onClick={() => {ToggleLocal(!ShowLocal)}}>
           {(!ShowLocal) && <IconImageSearch className="text-[#f713ffff]" width={25} height = {25} />}

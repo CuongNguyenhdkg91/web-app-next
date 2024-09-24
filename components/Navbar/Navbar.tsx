@@ -18,8 +18,8 @@ const Navbar = () => {
               <div className = "flex flex-row justify-between md:hidden">
                 <ul>
                   <li className = "hover:cursor-pointer" onClick = {()=> {verifyAuth().then((isAuth) => {if(isAuth){router.push('/EditInfo')}})}} > Forms </li>
-                  <li><Link href="/Activity" > Community </Link></li>
-                  <li><Link href="/MediaCreate" > Media Make </Link></li>
+                  <li><Link href="./Activity" > Community </Link></li>
+                  <li><Link href="./Gallery" >Gallery </Link></li>
                 </ul>
               </div>
                 <ul>

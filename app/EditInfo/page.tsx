@@ -123,11 +123,11 @@ const CreateNew = () => {
   }
 
   return (
+    
     <div>
 
       <img src ="https://www.ygfamily.com/contents/images/2023/07/artist1.jpg" />
-
-    
+   
       <FormTemplate
         title="Create New Item"
         actionLabel="Create"

@@ -1,12 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Oswald&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Oswald&display=swap'); */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  background: linear-gradient(to right, grey,white 5% 90%, grey)
+  background: ''
+}
+
+.radial-gradient{
+  background-image: radial-gradient(circle at center 15%, #d400ff, #3100f7);
+}
+
+.wordArt{
+  text-shadow: 1px 1px 1px blue;
+}
+
+.blueStroke{
+  outline-color: #3100f7;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -67,9 +79,6 @@ ul{
 
 
 .instruction {
-  .symbolSet{
-    color:yellowgreen;
-  }
 
   strong{
     font-size: 16pt;
@@ -95,14 +104,6 @@ ul{
   font-size: 14pt;
   margin-top: 0;
   }
-
-  .font-awesome::before{
-    font-family: FontAwesome;
-    content:'\f017';
-    font-size: 40pt;
-    color:green
-  }
-
 }
 
 
