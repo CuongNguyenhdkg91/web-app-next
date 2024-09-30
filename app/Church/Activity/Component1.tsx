@@ -35,7 +35,7 @@ interface Props {
 }
 /* @figmaId 5:9 */
 
-const pacifico = Pacifico({
+export const pacifico = Pacifico({
   weight:['400'],
   subsets: ['vietnamese']
 })

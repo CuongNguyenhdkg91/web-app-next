@@ -18,7 +18,8 @@ body {
 }
 
 .blueStroke{
-  outline-color: #3100f7;
+  -webkit-text-stroke: 6pt blue;
+  /* text-shadow: -4pt 0 5px blue, 0 4pt 5px blue, 4pt 0 5px blue, 0 -4pt 5px blue; */
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -45,7 +46,7 @@ ul{
     font-size: 40pt;
 
     img{
-      width:120px;
+      width:15px;
     }
   }
   .section_links{
