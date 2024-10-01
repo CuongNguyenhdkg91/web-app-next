@@ -8,7 +8,7 @@ interface SectionLinks{
 	collecttions: FooterLinks[]
 }
 
-function Section_links ({group, subsets}: SectionLinks) {
+/* function Section_links ({group, subsets}: SectionLinks) {
 	return(
 		<div className="flex flex-col mb-8">
 			<span className="mb-3 font-extrabold uppercase">{group}</span>
@@ -19,7 +19,7 @@ function Section_links ({group, subsets}: SectionLinks) {
 			)}
 		</div>
 	)
-}
+} */
 
 function footer() {
     return(

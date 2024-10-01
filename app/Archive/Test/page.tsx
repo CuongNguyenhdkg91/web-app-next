@@ -9,7 +9,7 @@ type order = 1|2|3|4|5
 
 interface Mysterious {
     name: string
-    No: order
+    No: number //use order meet error in build when assign order = number
     writing: string
     imgUrl: string
 }
@@ -25,7 +25,7 @@ const file = fs.readFileSync(process.cwd() + '/public/test.json', 'utf8');
 const data = JSON.parse(file);
 const rosary: Rosary[] = data
 
-function WordOfNo (No: order) :string {
+function WordOfNo (No: number) :string {
     switch (No){
         case 1: return 'nhất'; break;
         case 2: return 'hai'; break;
@@ -169,7 +169,7 @@ const page = () =>
     // let data = rosary[Id-1]
     // console.log(rosary[3])
 
-    let index:order = 1
+    let index = 1
 
     return(
     <div>
@@ -179,10 +179,10 @@ const page = () =>
             index=j+1
             // console.log(data.Myths)
             return(
-                <div className="grid grid-cols-2 gap-y-[2px] mx-[1.5px] mb-[13px]">
-                    {list.map(() => {
+                <div key = {`${data.Id}-${j}`}className="grid grid-cols-2 gap-y-[2px] mx-[1.5px] mb-[13px]">
+                    {list.map((item,k) => {
                     return(
-                        <div className="w-full px-[1.5px]">
+                        <div key = {k} className="w-full px-[1.5px]">
                             <Test 
                             name= {data.Name}
                             No={index}
