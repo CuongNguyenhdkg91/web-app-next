@@ -6,30 +6,7 @@
 @tailwind utilities;
 
 body {
-  background: ''
 }
-
-.radial-gradient{
-  background-image: radial-gradient(circle at center 15%, #d400ff, #3100f7);
-}
-
-.wordArt{
-  text-shadow: 1px 1px 1px blue;
-}
-
-.blueStroke{
-  -webkit-text-stroke: 6pt blue;
-  /* text-shadow: -4pt 0 5px blue, 0 4pt 5px blue, 4pt 0 5px blue, 0 -4pt 5px blue; */
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
 
 ul{
   display: flex;
@@ -46,7 +23,7 @@ ul{
     font-size: 40pt;
 
     img{
-      width:15px;
+      width:120px;
     }
   }
   .section_links{
@@ -106,6 +83,15 @@ ul{
   margin-top: 0;
   }
 }
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
 
 
 

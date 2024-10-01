@@ -1,0 +1,50 @@
+[
+ {
+  "Id": 1,
+  "Name": "vui",
+  "Stock": 5,
+  "Myths": [
+   "Thiên thần truyền tin cho Đức Bà chịu thai. Ta hãy xin cho được ở khiêm nhường.",
+   "Đức Bà đi viếng bà thánh Isave. Ta hãy xin cho được lòng yêu người.",
+   "Đức Bà sinh Đức Chúa Giêsu nơi hang đá. Ta hãy xin cho được lòng khó khăn.",
+   "Đức Bà dâng Đức Chúa Giêsu trong đền thánh. Ta hãy xin cho được vâng lời chịu lụy.",
+   "Đức Bà tìm được Đức Chúa Giêsu trong đền thánh. Ta hãy xin cho được giữ nghĩa cùng Chúa luôn."
+  ]
+ },
+ {
+  "Id": 2,
+  "Name": "thương",
+  "Stock": 5,
+  "Myths": [
+   "Đức Chúa Giêsu lo buồn đổ mồ hôi máu. Ta hãy xin cho được ăn năn tội nên.",
+   "Đức Chúa Giêsu chịu đánh đòn. Ta hãy xin cho được hãm mình chịu khó bằng lòng.",
+   "Đức Chúa Giêsu chịu đội mão gai. Ta hãy xin cho được chịu mọi sự sỉ nhục bằng lòng.",
+   "Đức Chúa Giêsu vác Thánh giá. Ta hãy xin cho được vác Thánh giá theo chân Chúa.",
+   "Đức Chúa Giêsu chịu chết trên cây Thánh giá. Ta hãy xin đóng đanh tính xác thịt vào Thánh giá Chúa."
+  ]
+ },
+ {
+  "Id": 3,
+  "Name": "mừng",
+  "Stock": 5,
+  "Myths": [
+   "Đức Chúa Giêsu sống lại. Ta hãy xin cho được sống lại thật về phần linh hồn.",
+   "Đức Chúa Giêsu lên trời. Ta hãy xin cho được ái mộ những sự trên trời.",
+   "Đức Chúa Thánh Thần hiện xuống. Ta hãy xin cho được lòng đầy rẫy mọi ơn Đức Chúa Thánh Thần.",
+   "Đức Chúa Trời cho Đức Bà lên trời. Ta hãy xin ơn chết lành trong tay Đức Mẹ.",
+   "Đức Chúa Trời thưởng Đức Mẹ trên trời. Ta hãy xin Đức Mẹ phù hộ cho ta được thưởng cùng Đức Mẹ trên nước thiên đàng."
+  ]
+ },
+ {
+  "Id": 4,
+  "Name": "sáng",
+  "Stock": 5,
+  "Myths": [
+   "Đức Chúa Giêsu chịu phép Rửa tại sông Giođan. Ta hãy xin cho được sống xứng đáng là con Thiên Chúa.",
+   "Đức Chúa Giêsu làm phép lạ tại tiệc cưới Cana. Ta hãy xin cho được noi gương Đức Mẹ mà vững tin vào Chúa.",
+   "Đức Chúa Giêsu rao giảng Nước Trời và kêu gọi sám hối. Ta hãy xin cho được tin vào lòng Chúa thương xót và siêng năng lãnh nhận Bí tích Giao hòa.",
+   "Đức Chúa Giêsu biến hình trên núi. Ta hãy xin cho được biến đổi nhờ Chúa Thánh Thần.",
+   "Đức Chúa Giêsu lập Bí tích Thánh Thể. Ta hãy xin cho được siêng năng tham dự Thánh lễ và rước Mình Máu Thánh Người."
+  ]
+ }
+]

@@ -1,0 +1,61 @@
+.blueStroke{
+    color: white;
+    .Stroke{-webkit-text-stroke: 3pt blue;}
+    /* text-shadow: -4pt 0 5px blue, 0 4pt 5px blue, 4pt 0 5px blue, 0 -4pt 5px blue; */
+  }
+
+.whiteStroke{
+    color: green;
+    .Stroke{-webkit-text-stroke: 3pt white;}
+    /* text-shadow: -4pt 0 5px blue, 0 4pt 5px blue, 4pt 0 5px blue, 0 -4pt 5px blue; */
+  }
+
+.joy{
+    background-image: radial-gradient(circle at center 15%, #f2e29b, #ff0000);
+    d: path('M105,23 a 180 180 0 0 1 90 0');
+    text{
+        fill: #ff0000;
+        text-shadow: 2pt 2pt 5pt #ff0000;
+        }
+}
+
+.sorrow{
+    background-image: radial-gradient(circle at center 15%, #d400ff, #3100f7);
+    d: path('M95,30 a 150 150 0 0 1 121 0');
+    text{
+        fill: #ec8eff;
+        text-shadow: 2pt 2pt 5px blue;
+        }
+  }
+
+.glorious{
+    background-image: radial-gradient(circle at center 15%, #ffc4c4, #ff00a8);
+    d: path('M100,26 a 150 150 0 0 1 105 0');
+    text{
+        fill: #ff00a4;
+        text-shadow: 2pt 2pt 5px #ff00a4;
+        }
+  }
+
+.luminous{
+    background-image: radial-gradient(circle at center 15%, #ffffff, #2c76f9);
+    d: path('M100,26 a 150 150 0 0 1 105 0');
+    text{
+        fill: #ffffff;
+        text-shadow: 2pt 2pt 5px blue;
+        }
+  }
+.writingXL{
+    font-size: 21px;
+  }
+
+.writingL{
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.writingS{
+  line-height: 1.4;  
+}
+  
+  
