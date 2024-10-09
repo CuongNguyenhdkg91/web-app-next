@@ -57,6 +57,9 @@ const  UserMenu = () => {
                     <MenuItem
                     onClick={()=>{}}
                     label = "Extra"/>
+                    <MenuItem
+                    onClick={toggleOpen}
+                    label = "Church"/>
 
                 </div>
             )}

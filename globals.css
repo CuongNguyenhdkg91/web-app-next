@@ -92,6 +92,13 @@ ul{
   }
 } */
 
+#w1,#w2,#w3{
+  /* border-style: dashed;
+  width: 200px; */
+  visibility: hidden;
+  position: fixed;
+}
+
 
 
 

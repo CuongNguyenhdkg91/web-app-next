@@ -1,6 +1,6 @@
 
 import { Pattaya, Dancing_Script, Pacifico } from "next/font/google"
-import classes from './test.module.css'
+import classes from './rosary.module.css'
 import Image from "next/image"
 import * as fs from 'fs'
 import { ReactElement } from "react"
@@ -94,7 +94,7 @@ const Test = (props: Mysterious) => {
     }
 
     let textClass = ''
-    if (writing.length < 74) {
+    if (writing.length < 76) {
         textClass = classes.writingS
     }
     if (writing.length > 110) {
@@ -107,7 +107,7 @@ const Test = (props: Mysterious) => {
     return(
         <div className="flex flex-row">
             {/* <div className="w-32 h-32 bg-gradient-to-r from-[cyan] to-[blue]"> </div> */}
-            <div className={`max-w-[560px] w-full aspect-[1.78] max-h-[320px] ${classArt} relative`}>
+            <div className={`max-w-[560px] w-full aspect-[1.82] max-h-[320px] ${classArt} relative`}>
                 <div className='absolute top-0 z-50 w-full'>
                     <svg viewBox="0 0 300 40" className="absolute">
                         {/* {path} */}
@@ -117,21 +117,21 @@ const Test = (props: Mysterious) => {
                         </text>
                     </svg>
 
-                    <div className="absolute top-[18px] w-full h-[130px] flex flex-row justify-center" >
+                    <div className="absolute top-[18px] w-full h-[120px] flex flex-row justify-center" >
                         <img className="h-full" src="/rosary-necklace.png" />
                     </div>
 
-                    <div className='ml-3 mt-1 w-28 h-28 rounded-[56px] overflow-hidden'>
+                    <div className='ml-3 mt-1 w-[108px] h-[108px] rounded-[54px] overflow-hidden'>
                         <img src={imgUrl} className="w-full" />
                     </div>
                     
                     <p className={`text-[10pt] text-[white] ml-3 ${pacifico.className}`}>{`Thứ ${WordOfNo(No)}:`}</p>
 
-                    <div className={`absolute w-full px-3 font-[700] text-[28pt] text-[3.3vw] leading-[1] ${textClass} ${classWriting} ${dancingScript.className}`}>
-                        <p className={`absolute ${classes.Stroke}`}>
+                    <div className={`absolute w-full pl-2 font-[700] text-[28pt] text-[3.3vw] leading-[1] ${textClass} ${classWriting} ${dancingScript.className}`}>
+                        <p className={`pr-1 absolute ${classes.Stroke}`}>
                             {writing}
                         </p>
-                        <p className={`absolute`}>
+                        <p className={`pr-1 absolute`}>
                             {writing}
                         </p>
                     </div>
@@ -158,17 +158,9 @@ const Test = (props: Mysterious) => {
     )
 }
 
-const page = () =>
+const page20 = () =>
 {
     const list = Array(10).fill(1)
-
-    // const response = await fetch('/test.json');
-    // const file = await response.json()
-
-    // let Id = 3
-    // let data = rosary[Id-1]
-    // console.log(rosary[3])
-
     let index = 1
 
     return(
@@ -177,7 +169,6 @@ const page = () =>
             return(
             data.Myths.map((myth,j) => {
             index=j+1
-            // console.log(data.Myths)
             return(
                 <div key = {`${data.Id}-${j}`}className="grid grid-cols-2 gap-y-[2px] mx-[1.5px] mb-[13px]">
                     {list.map((item,k) => {
@@ -199,4 +190,44 @@ const page = () =>
     )
 }
 
-export default page
+const page4 = () =>
+    {
+        const list = Array(10).fill(1)
+
+        let index = 1
+    
+        return(
+        <div>
+            {rosary.map((data) => {
+                return(
+                <div key = {data.Id} className="grid grid-cols-2 gap-y-[2px] mx-[1.5px] pt-[12px] break-after-page">
+                {data.Myths.map((myth,j) => {
+                index=j+1
+                return(
+                        <>
+                            <div key={j} className="w-full px-[1.5px]">
+                                <Test 
+                                name= {data.Name}
+                                No={index}
+                                writing={myth}
+                                imgUrl={`/rosary/${data.Id}-${index}.jpg`}
+                                />
+                            </div>
+                            <div key={j} className="w-full px-[1.5px]">
+                                <Test 
+                                name= {data.Name}
+                                No={index}
+                                writing={myth}
+                                imgUrl={`/rosary/${data.Id}-${index}.jpg`}
+                                />
+                            </div>
+                        </>
+                )})}
+                </div>
+            )})
+            }
+        </div>
+        )
+    }
+
+export default page4

@@ -23,9 +23,10 @@
   }
 
   .image2 {
+    margin: 10px;
     width: 108px;
     height: 106px;
-    background-image: url('/logoTNTT.jpg'); 
+    background-image: url('/logoTNTT.jpg-rmbg.png'); 
     /* webpackIgnore: true */
     background-position: center;
     background-repeat: no-repeat;

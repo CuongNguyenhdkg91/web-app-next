@@ -25,26 +25,26 @@ function footer() {
     return(
     <div className="footer pl-8 pt-16 bg-purpleBg text-purpleTxt flex gap-x-28 gap-y-8 justify-center flex-row md:flex-col print:hidden">
 		<div className="signature">
-			<img src="/logo-search-grid-1x.png"/>
+			<img src="/logoMC.png"/>
 			2024
 		</div>
 		<div className="grid grid-cols-[repeat(4,200px)] md:grid-cols-2">
 			{/* move Frameworks from the footer into the emphasized content */}
 			<div className="section_links">
 				<span className="section_links_title"> FRAMEWORK </span>
-				<div><a className="section_links_link"> Electron </a></div>
 				<div><a className="section_links_link"> Golang </a></div>
-				<div><a className="section_links_link"> Python </a></div>
 				<div><a className="section_links_link"> Kotlin </a></div>
+				<div><a className="section_links_link"> Python </a></div>
+				<div><a className="section_links_link"> Electron </a></div>
 				<div><a className="section_links_link"> Flutter </a></div>
 			</div>
 			<div className="section_links">
 				<span className="section_links_title"> EDGING </span>
-				<div><a className="section_links_link"> Fintech</a></div>
-				<div><a className="section_links_link"> Smart Contract </a></div>
+				<div><a className="section_links_link"> AI ImageCreate </a></div>				
 				<div><a className="section_links_link"> AI Chatbot </a></div>
+				<div><a className="section_links_link"> Fintech</a></div>
 				<div><a className="section_links_link"> Crypto Trading </a></div>
-				<div><a className="section_links_link"> CAM service </a></div>
+				<div><a className="section_links_link"> Smart Contract </a></div>
 			</div>
 			<div className="section_links">
 				<span className="section_links_title"> REALISTIC </span>
@@ -53,6 +53,7 @@ function footer() {
 				<div><a className="section_links_link"> Media Process </a></div>
 				<div><a className="section_links_link"> Transaction </a></div>
 				<div><a className="section_links_link"> Storage </a></div>
+				<div><a className="section_links_link"> CAM service </a></div>		{/* 3D printing */}		
 			</div>
 			<div className="section_links ">
 				<span className="section_links_title"> SOCIAL</span>
