@@ -1,11 +1,22 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Oswald&display=swap'); */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
+@font-face{
+  font-family: Reaver;
+  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff") format('woff');
+}
+
+@font-face {
+  font-family: Radiance;
+  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance.woff") format('woff');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
+  /* overflow: hidden; */
 }
 
 ul{
@@ -13,29 +24,27 @@ ul{
 
   li{
     list-style-type: none;
-    padding: 12px;
     font-size: 18px;
     }
 }
 
 .footer {
-  .signature {
-    font-size: 40pt;
-
     img{
       width:120px;
     }
-  }
-  .section_links{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-  }
-  .section_links_title{
-    font-weight: 800;
-    margin-bottom: 12px;
-  }
 }
+  
+.section_links{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.section_links_title{
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+
 .wrapper-LoginModal{
   div{
     border-radius: inherit;

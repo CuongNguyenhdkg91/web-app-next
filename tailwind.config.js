@@ -19,7 +19,8 @@ module.exports = {
     },
 
     screens: {
-      'md': {max:'500px'}
+      'md': {max:'550px'},
+      'tbl': {max:'1000px'}
     }
   },
   plugins: [],
