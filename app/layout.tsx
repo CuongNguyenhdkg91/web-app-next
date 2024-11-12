@@ -1,5 +1,6 @@
-import Navbar from '@/components/Navbar/Navbar'
-import Footer from '@/components/Navbar/Footer'
+import Navbar from '@/components/Navigation/Navbar/Navbar'
+import { FooterMC } from '@/components/Navigation/Footer'
+
 import { Provider } from 'react-redux' //npm update before npm install react-redux
 
 import '../globals.css'
@@ -21,7 +22,7 @@ export default function RootLayout({children,}: {children: React.ReactNode})
       <body className={inter.className}>
           <Navbar />
           {children}
-          <Footer/>
+          <FooterMC />
       </body>
     </html>
   )

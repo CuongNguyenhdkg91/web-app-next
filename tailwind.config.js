@@ -5,11 +5,9 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors:{
-      'purpleBg': '#232d4f',
-      'purpleTxt': 'rgb(142, 155, 209)',
-      'blue': '#0057FF',
-    },
+    // colors:{
+    //   'blue': '#0057FF',
+    // },
 
     extend: {
       /* backgroundImage: {

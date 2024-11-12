@@ -3,7 +3,7 @@ import {useForm} from 'react-hook-form'
 import { useCallback, useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
-import Button from "../Elements/Button";
+import {Button} from "./Button";
 
 interface ModalProps {
   isOpen?: boolean;

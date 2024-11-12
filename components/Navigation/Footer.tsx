@@ -21,9 +21,9 @@ interface SectionLinks{
 	)
 } */
 
-function footer() {
+function FooterMC() {
     return(
-    <div className="footer px-4 pt-16 bg-purpleBg text-purpleTxt flex gap-y-8 justify-evenly flex-row md:flex-col print:hidden">
+    <div className="footer px-4 pt-16 bg-[#232d4f] text-[rgb(142,155,209)] flex gap-y-8 justify-evenly flex-row md:flex-col print:hidden">
 		<div >
 			<img src="/logoMC.png"/>
 			<span className="text-[40pt] text-[#a9955a]">2024</span>
@@ -87,4 +87,4 @@ function footer() {
     </div>
 )}
 
-export default footer
+export {FooterMC}

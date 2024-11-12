@@ -108,6 +108,34 @@ ul{
   position: fixed;
 }
 
+table.database{
+  border-width: 1px;
+  border-style: solid;
+  font-family: 'Courier New', Courier, monospace;
+
+  th{
+    border-width: 1px;
+    border-style: solid;
+    min-width: 130px;
+    background-color: #e7e7af;
+
+   }
+
+  th:nth-child(1){
+    min-width: 50px;
+  }
+
+  td{
+    border-width: 1px;
+    border-style: solid;
+    padding: 4px;
+    max-width: 400px;
+    overflow: hidden;
+    background-color: #ffffef;
+    font-size: large;
+    }
+}
+
 
 
 
