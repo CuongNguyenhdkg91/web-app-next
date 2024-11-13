@@ -1,0 +1,22 @@
+@font-face{
+    font-family: Reaver;
+    src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff") format('woff');
+  }
+  
+@font-face {
+    font-family: Radiance;
+    src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance.woff") format('woff');
+  }
+
+@font-face {
+  font-family: RocaOne;
+  src: url("/ArtLib/rocaone-bold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: AmsterdamOne;
+  src: url("/ArtLib/Amsterdam_One.woff2") format('woff2');
+}
+
+
+ 

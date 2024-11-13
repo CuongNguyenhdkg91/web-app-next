@@ -1,0 +1,15 @@
+.footer {
+    img{
+      width:120px;
+    }
+}
+  
+.section_links{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.section_links_title{
+  font-weight: 800;
+  margin-bottom: 12px;
+}

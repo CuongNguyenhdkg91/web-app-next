@@ -1,6 +1,6 @@
 'use client'
 
-import { FormAdd } from '@/components/Form/FormAdd/FormAdd.jsx';
+import { FormAdd } from '@/components/Form/FormAdd/FormAdd';
 import slideImages from  './Images.js'
 import css from './gallery.module.css'
 import { useState } from 'react';

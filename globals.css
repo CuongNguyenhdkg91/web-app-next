@@ -1,15 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Oswald&display=swap'); */
+@import url('/ArtLib/artFonts.css');  /* must not comment the top import line */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-
-@font-face{
-  font-family: Reaver;
-  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff") format('woff');
-}
-
-@font-face {
-  font-family: Radiance;
-  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance.woff") format('woff');
-}
+/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Oswald&display=swap'); */
 
 @tailwind base;
 @tailwind components;
@@ -18,6 +9,7 @@
 body {
   /* overflow: hidden; */
 }
+
 
 ul{
   display: flex;
@@ -28,21 +20,6 @@ ul{
     }
 }
 
-.footer {
-    img{
-      width:120px;
-    }
-}
-  
-.section_links{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-.section_links_title{
-  font-weight: 800;
-  margin-bottom: 12px;
-}
 
 
 .wrapper-LoginModal{

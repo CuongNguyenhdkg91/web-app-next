@@ -1,7 +1,17 @@
 'use server'
 import { unstable_cache} from "next/cache"
-import { Post } from "./page"
+
 var unidecode = require('unidecode')
+
+export type Post = {
+    id?: string;
+    title: string;
+    content: string;
+    grade: string
+    published?: boolean;
+    authorId?: string;
+    note: string[]
+  };
 
 async function GetData(){
     let response = await fetch('https://web-app-next-lac.vercel.app/api/GetPost/1')
